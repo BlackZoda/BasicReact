@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-dark-primary: rgb(40, 40, 60);
+    --color-dark-secondary: rgb(60, 60, 90);
+    --color-light-primary: rgb(255, 255, 240);
+    --color-light-secondary: rgb(255, 255, 200);
+}
+
+html {
+    font-size: 22px;
+}
+
+body {
+   min-height: 100vh; 
+   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   background: linear-gradient(45deg, var(--color-dark-primary), var(--color-dark-secondary));
+   color: var(--color-light-primary);
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 2px);
+    max-width:500px;
+    border: 2px solid var(--color-light-primary);
+    margin: auto;
+}
+
+header {
+    width: calc(100%);
+    padding: 0 0.25em;
+    background: linear-gradient(45deg, var(--color-light-primary), var(--color-light-secondary));
+    color: var(--color-dark-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
