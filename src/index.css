@@ -11,6 +11,7 @@
     --color-light-primary: rgb(255, 255, 240);
     --color-light-secondary: rgb(255, 255, 200);
     --color-warning: rgb(255, 60, 60);
+    --color-go: rgb(80, 200, 120);
 }
 
 html {
@@ -39,13 +40,13 @@ body {
 
 header {
     width: calc(100%);
-    padding: 0.25em;
+    padding: 0.25rem 0.25rem 0.25rem 0.9rem;
     background: linear-gradient(45deg, var(--color-light-primary), var(--color-light-secondary));
     color: var(--color-dark-primary);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.8em;
+    font-size: 0.6em;
 }
 
 main {
@@ -120,4 +121,69 @@ ul {
 .item svg:focus,
 .item svg:hover {
     color: var(--color-warning);
+}
+
+.addForm {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0.5rem 0 0;
+    padding: 0 0.5rem 0.5rem 0.75rem;
+    border-bottom: 4px solid var(--color-light-primary);
+}
+
+.addForm label {
+    position: absolute;
+    left: -7777px;
+}
+
+.addForm input[type='text'] {
+    flex-grow: 0.985;
+    min-height: 30px;
+    font-size: 0.7rem;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    margin-right: 0.25rem;
+    outline: none;
+}
+
+button {
+    height: 36px;
+    min-width: 36px;
+    border-radius: 0.25rem;
+    padding: 0.4rem;
+    font-size: 0.7rem;
+    background-color: var(--color-light-secondary);
+    cursor: pointer;
+}
+
+button:focus,
+button:hover {
+    color: var(--color-light-primary);
+    background-color: var(--color-go);
+    outline: none;
+}
+
+.searchForm {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0.25rem 0 0;
+    padding: 0 0.5rem 0.25rem;
+    border-bottom: 2px solid var(--color-light-secondary);
+}
+
+.searchForm label {
+    position: absolute;
+    left: -7777px;
+}
+
+.searchForm input[type='text'] {
+    flex-grow: 0.985;
+    min-height: 36px;
+    font-size: 0.7rem;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    margin: 0.25rem 0rem 0.25rem 0.25rem;
+    outline: none;
 }
