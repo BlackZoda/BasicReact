@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 
 :root {
@@ -9,6 +10,7 @@
     --color-dark-secondary: rgb(60, 60, 90);
     --color-light-primary: rgb(255, 255, 240);
     --color-light-secondary: rgb(255, 255, 200);
+    --color-warning: rgb(255, 60, 60);
 }
 
 html {
@@ -64,4 +66,56 @@ footer {
     justify-content: space-between;
     align-items: center;
     font-size: 0.6em;
+    place-content: center;
+}
+
+ul {
+    width: 100%;
+    padding: 0 0.25rem 0.25rem;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0 0.5rem 0.5rem;
+    margin: 0.25rem 0;
+    background-color: var(--color-dark-primary);
+}
+
+.item:first-child {
+    margin: 0;
+}
+
+.item input[type="checkbox"] {
+    text-align: center;
+    width: 2.5rem;
+    min-width: 48px;
+    height: 1rem;
+    min-height: 20px;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+.item input[type="checkbox"]:focus + label {
+    text-decoration: underline; 
+}
+
+.item > label {
+    font-size: 0.75rem;
+    flex-grow: 1;
+}
+
+.item svg {
+    width: 2.5rem;
+    min-width: 48px;
+    height: 1rem;
+    min-height: 1rem;
+    color: var(--color-light-secondary);
+    cursor: pointer;
+}
+
+.item svg:focus,
+.item svg:hover {
+    color: var(--color-warning);
 }
